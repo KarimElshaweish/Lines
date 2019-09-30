@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".Acticites.LoginAct">
+<ImageView
+    android:onClick="finish"
+    android:layout_marginTop="15dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:id="@+id/backImg"
+    android:src="@drawable/back"/>
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="160dp"
+        android:layout_height="128dp"
+        android:src="@drawable/logo"
+        android:layout_below="@id/backImg"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/loginTxt"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/nunito_req"
+        android:layout_below="@id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="21.2sp"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center_horizontal"
+        android:text="Login"
+        />
+    <EditText
+
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/loginTxt"
+        android:inputType="phone"
+        android:fontFamily="@font/nunito_req"
+        android:layout_margin="40dp"
+        android:id="@+id/phoneNumber"
+        android:textSize="14.5sp"
+        android:textColor="#000"
+        android:lineSpacingExtra="4.8sp"
+        android:hint="Phone Number"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/border_gray"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_below="@id/phoneNumber"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textColor="#fff"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:fontFamily="@font/nunito_req"
+            android:background="@drawable/button"/>
+</RelativeLayout>

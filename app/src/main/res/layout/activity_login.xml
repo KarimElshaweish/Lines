@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Acticites.Login"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+<RelativeLayout
+    android:background="#fff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  >
+
+   <ImageView
+       android:id="@+id/logo"
+       android:layout_width="160dp"
+       android:layout_height="128dp"
+       android:layout_centerHorizontal="true"
+       android:src="@drawable/logo"
+       android:layout_marginTop="40dp"/>
+    <TextView
+        android:fontFamily="@font/nunito_bold"
+        android:id="@+id/signTitle"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="21.2sp"
+        android:textColor="#5636a3"
+        android:lineSpacingExtra="-1.8sp"
+        android:gravity="center_horizontal"
+        tools:text="Sign Up"
+        android:layout_centerHorizontal="true"
+        />
+    <LinearLayout
+        android:layout_margin="15dp"
+        android:layout_below="@id/signTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <EditText
+        android:inputType="textPersonName"
+        android:fontFamily="@font/nunito_req"
+        android:layout_margin="5dp"
+        android:id="@+id/fullName"
+        android:textSize="14.5sp"
+        android:textColor="#000"
+        android:lineSpacingExtra="4.8sp"
+        android:hint="Full name"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/border_gray"/>
+        <EditText
+            android:inputType="phone"
+            android:fontFamily="@font/nunito_req"
+        android:layout_margin="5dp"
+        android:id="@+id/phoneNumber"
+        android:textSize="14.5sp"
+        android:textColor="#000"
+        android:lineSpacingExtra="4.8sp"
+        android:hint="Phone Number"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/border_gray"/>
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="School"
+            android:paddingLeft="10dp"
+            android:fontFamily="@font/nunito_req"
+            android:textSize="14.5sp"
+            android:textColor="#000"
+            android:lineSpacingExtra="4.8sp"
+            />
+
+       <RelativeLayout
+           android:layout_margin="5dp"
+           android:background="@drawable/border_gray"
+           android:padding="10dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <Spinner
+               android:id="@+id/Spinner"
+               android:layout_width="match_parent"
+               android:layout_height="40dp"/>
+       </RelativeLayout>
+
+        <EditText
+            android:inputType="text"
+            android:fontFamily="@font/nunito_req"
+        android:layout_margin="5dp"
+        android:id="@+id/state"
+        android:textSize="14.5sp"
+        android:textColor="#000"
+        android:lineSpacingExtra="4.8sp"
+        android:hint="State"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/border_gray"/>
+        <EditText
+            android:inputType="text"
+            android:fontFamily="@font/nunito_req"
+        android:layout_margin="5dp"
+        android:id="@+id/area"
+        android:textSize="14.5sp"
+        android:textColor="#000"
+        android:lineSpacingExtra="4.8sp"
+        android:hint="Area"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/border_gray"/>
+        <EditText
+            android:inputType="number"
+            android:fontFamily="@font/nunito_req"
+        android:layout_margin="5dp"
+        android:id="@+id/numberOfPassengers"
+        android:textSize="14.5sp"
+        android:textColor="#000"
+        android:lineSpacingExtra="4.8sp"
+        android:hint="Number of Passengers"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/border_gray"/>
+        <EditText
+            android:inputType="textEmailAddress"
+            android:fontFamily="@font/nunito_req"
+        android:id="@+id/email"
+        android:textSize="14.5sp"
+        android:textColor="#000"
+        android:lineSpacingExtra="4.8sp"
+        android:hint="Email (Optinal)"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/border_gray"/>
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/nunito_bold"
+            android:textSize="16.3sp"
+            android:textColor="#ffffff"
+            android:lineSpacingExtra="3sp"
+            tools:text="Sign Up"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/button"/>
+    </LinearLayout>
+</RelativeLayout>
+</ScrollView>

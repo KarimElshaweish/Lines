@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".Acticites.ActivationCodeAct">
+    <ImageView
+        android:onClick="finish"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:id="@+id/backImg"
+        android:src="@drawable/back"/>
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/backImg">
+        <TextView
+            android:fontFamily="@font/nunito_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16.2sp"
+            android:textColor="#000000"
+            android:lineSpacingExtra="3sp"
+            android:gravity="center_horizontal"
+            android:text="Activation Code"
+            />
+        <TextView
+            android:fontFamily="@font/nunito_req"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13.3sp"
+            android:textColor="#99a2b3"
+            android:lineSpacingExtra="5.8sp"
+            android:gravity="center_horizontal"
+            tools:text="Please Enter The Password"
+            /> <TextView
+            android:fontFamily="@font/nunito_req"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13.3sp"
+            android:textColor="#99a2b3"
+            android:lineSpacingExtra="5.8sp"
+            android:gravity="center_horizontal"
+            tools:text="sent to 0XXXXXXXXXX"
+            />
+        <com.chaos.view.PinView
+            android:layout_marginTop="30dp"
+            android:id="@+id/pinView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/PinWidget.PinView" />
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button"
+        android:text="Submit"
+        android:textColor="#fff"
+        android:fontFamily="@font/nunito_bold"
+        android:layout_margin="25dp"/>
+
+</RelativeLayout>
