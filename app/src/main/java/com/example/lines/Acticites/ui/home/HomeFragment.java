@@ -7,12 +7,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
@@ -34,8 +36,10 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback, Locati
 
     private HomeViewModel homeViewModel;
     private GoogleMap mMap;
-
+    CardView cvBottom,cvTop;
     RecyclerView rv;
+    EditText destion;
+    LinearLayout linBottom;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
@@ -51,6 +55,19 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback, Locati
         rv.setLayoutManager( new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         HorzAdapter Adapter=new HorzAdapter(getContext());
         rv.setAdapter(Adapter);
+
+        cvBottom=root.findViewById(R.id.cvBottom);
+        cvTop=root.findViewById(R.id.cvTop);
+        destion=root.findViewById(R.id.destion);
+        linBottom=root.findViewById(R.id.linBottom);
+        destion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cvBottom.setVisibility(View.GONE);
+                cvTop.setVisibility(View.VISIBLE);
+                linBottom.setVisibility(View.VISIBLE);
+            }
+        });
         return root;
     }
 

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:layout_marginTop="7dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="250dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:padding="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_alignParentRight="true"
+            android:fontFamily="@font/nunito_req"
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10.2sp"
+            android:textColor="#cc000000"
+            android:lineSpacingExtra="9.2sp"
+            android:gravity="center_horizontal"
+            android:text="29 jun 2019"
+            />
+    <TextView
+        android:layout_below="@id/date"
+        android:id="@+id/addressFrom"
+        android:fontFamily="@font/nunito_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14.5sp"
+        android:textColor="#cc000000"
+        android:lineSpacingExtra="4.8sp"
+        android:gravity="center_horizontal"
+        android:text="Home , St9"
+        />
+    <ImageView
+        android:layout_below="@id/addressFrom"
+        android:id="@+id/points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/points"/>
+        <TextView
+            android:fontFamily="@font/nunito_bold"
+            android:layout_below="@id/points"
+            android:id="@+id/toAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14.5sp"
+            android:textColor="#cc000000"
+            android:lineSpacingExtra="4.8sp"
+            android:gravity="center_horizontal"
+            android:text="School name , new city"
+            />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <ImageView
+    android:scaleType="fitXY"
+    android:layout_below="@id/cv"
+    android:layout_width="match_parent"
+    android:layout_height="118dp"
+    android:src="@drawable/cap2"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -8,10 +8,122 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     />
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/cvTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/nunito_req"
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10.2sp"
+                android:textColor="#cc000000"
+                android:lineSpacingExtra="9.2sp"
+                android:gravity="center_horizontal"
+                android:text="29 jun 2019"
+                />
+            <TextView
+                android:layout_below="@id/date"
+                android:id="@+id/addressFrom"
+                android:fontFamily="@font/nunito_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14.5sp"
+                android:textColor="#cc000000"
+                android:lineSpacingExtra="4.8sp"
+                android:gravity="center_horizontal"
+                android:text="Home , St9"
+                />
+            <ImageView
+                android:layout_below="@id/addressFrom"
+                android:id="@+id/points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/points"/>
+            <TextView
+                android:fontFamily="@font/nunito_bold"
+                android:layout_below="@id/points"
+                android:id="@+id/toAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14.5sp"
+                android:textColor="#cc000000"
+                android:lineSpacingExtra="4.8sp"
+                android:gravity="center_horizontal"
+                android:text="School name , new city"
+                />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+    android:visibility="visible"
+        android:id="@+id/cvBottom"
+    android:layout_width="match_parent"
+    android:layout_alignParentBottom="true"
+    android:layout_height="173dp">
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:fontFamily="@font/nunito_bold"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14.3sp"
+            android:textColor="#59474b"
+            android:lineSpacingExtra="-1sp"
+            android:gravity="center_horizontal"
+            android:text="Where to go?"
+            />
+
+
+            <EditText
+                android:id="@+id/destion"
+                android:hint="Select your destination"
+                android:fontFamily="@font/nunito_req"
+                android:drawableRight="@drawable/ic_right_arrow"
+                android:drawablePadding="7dp"
+                android:padding="7dp"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_gray"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+    <LinearLayout
+        android:id="@+id/linBottom"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
 <androidx.recyclerview.widget.RecyclerView
+    android:visibility="visible"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_alignParentBottom="true"
     android:id="@+id/rv"/>
+    <Button
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btn"
+        android:layout_below="@+id/rv"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:text="Choose Driver"
+        android:textSize="16.2sp"
+        android:fontFamily="@font/nunito_bold"
+        android:textColor="#fff"/>
+    </LinearLayout>
 </RelativeLayout>
