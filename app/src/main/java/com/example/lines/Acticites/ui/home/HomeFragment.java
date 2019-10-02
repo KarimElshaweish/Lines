@@ -1,14 +1,18 @@
 package com.example.lines.Acticites.ui.home;
 
+import android.content.res.ColorStateList;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationListener;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,19 +35,54 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class HomeFragment extends Fragment implements OnMapReadyCallback, LocationListener {
 
     private HomeViewModel homeViewModel;
     private GoogleMap mMap;
-    CardView cvBottom,cvTop;
+    CardView cvBottom,cvTop,cvBottomDriver;
     RecyclerView rv;
     EditText destion;
     LinearLayout linBottom;
+    RelativeLayout busFab,schoolFab;
+    View viewBus,ViewSchool;
+    Boolean checked=false;
+    Button btn;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_home, container, false);
+        cvBottomDriver=root.findViewById(R.id.cvBottomDriver);
+        btn=root.findViewById(R.id.btn);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cvBottomDriver.setVisibility(View.VISIBLE);
+            }
+        });
+        viewBus=root.findViewById(R.id.viewBus);
+        busFab=root.findViewById(R.id.bus);
+        busFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checked=!checked;
+                viewBus.setBackgroundColor(getResources().getColor(R.color.yallow));
+                busFab.setBackground(getResources().getDrawable(R.drawable.oval_yallow));
+
+            }
+        });
+        ViewSchool=root.findViewById(R.id.ViewSchool);
+        schoolFab=root.findViewById(R.id.school);
+        schoolFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(checked) {
+                    ViewSchool.setBackgroundColor(getResources().getColor(R.color.yallow));
+                    schoolFab.setBackground(getResources().getDrawable(R.drawable.oval_yallow));
+                }
+            }
+        });
         SupportMapFragment mMapFragment = SupportMapFragment.newInstance();
         FragmentTransaction fragmentTransaction =
                 getChildFragmentManager().beginTransaction();
