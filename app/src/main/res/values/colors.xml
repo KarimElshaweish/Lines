@@ -3,6 +3,6 @@
     <color name="colorPrimary">#5636a3</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-<color name="line_colors">#000000</color>
+<color name="line_colors">#ffffff</color>
     <color name="yallow">#ffc749</color>
 </resources>

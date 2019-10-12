@@ -17,12 +17,9 @@ import com.example.lines.R;
 
 public class TripsFragment extends Fragment {
 
-    private TripsViewModel tripsViewModel;
     RecyclerView rv;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        tripsViewModel =
-                ViewModelProviders.of(this).get(TripsViewModel.class);
         View root = inflater.inflate(R.layout.fragment_trips, container, false);
         rv=root.findViewById(R.id.rv);
         rv.setHasFixedSize(true);

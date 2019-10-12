@@ -1,10 +1,13 @@
 package com.example.lines.Acticites;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 
+import com.chaos.view.PinView;
 import com.example.lines.R;
 
 public class LoginAct extends AppCompatActivity {

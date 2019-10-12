@@ -33,7 +33,7 @@
                 />
             <TextView
                 android:layout_below="@id/date"
-                android:id="@+id/addressFrom"
+                    android:id="@+id/addressFrom"
                 android:fontFamily="@font/nunito_bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -87,18 +87,18 @@
             android:text="Where to go?"
             />
 
+        <AutoCompleteTextView
+            android:id="@+id/destion"
+            android:hint="Select your destination"
+            android:fontFamily="@font/nunito_req"
+            android:drawableRight="@drawable/ic_right_arrow"
+            android:drawablePadding="7dp"
+            android:padding="7dp"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_gray"/>
 
-            <EditText
-                android:id="@+id/destion"
-                android:hint="Select your destination"
-                android:fontFamily="@font/nunito_req"
-                android:drawableRight="@drawable/ic_right_arrow"
-                android:drawablePadding="7dp"
-                android:padding="7dp"
-                android:layout_marginTop="30dp"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/border_gray"/>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView

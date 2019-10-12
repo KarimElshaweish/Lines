@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 29
@@ -21,7 +22,13 @@ android {
 
 dependencies {
 
+    implementation 'com.github.florent37:expansionpanel:1.2.2'
+
+
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
 
 
     implementation 'com.chaos.view:pinview:1.4.3'
@@ -35,6 +42,9 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment:2.1.0'
     implementation 'androidx.navigation:navigation-ui:2.1.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+    implementation 'com.google.firebase:firebase-auth:16.0.5'
+    implementation 'com.google.firebase:firebase-core:16.0.5'
+    implementation 'com.google.firebase:firebase-database:16.0.4'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'

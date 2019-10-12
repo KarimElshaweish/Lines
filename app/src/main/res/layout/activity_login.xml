@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_height="wrap_content"
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<ScrollView
+    android:id="@+id/signupView"
+    android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".Acticites.Login"
     android:layout_width="match_parent"
@@ -64,6 +71,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/border_gray"/>
+        <EditText
+            android:inputType="numberPassword"
+            android:lines="1"
+            android:fontFamily="@font/nunito_req"
+            android:layout_margin="5dp"
+            android:id="@+id/password"
+            android:textSize="14.5sp"
+            android:textColor="#000"
+            android:lineSpacingExtra="4.8sp"
+            android:hint="Password"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_gray"/>
         <TextView
 
             android:layout_width="match_parent"
@@ -114,19 +135,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/border_gray"/>
-        <EditText
-            android:inputType="number"
-            android:fontFamily="@font/nunito_req"
-        android:layout_margin="5dp"
-        android:id="@+id/numberOfPassengers"
-        android:textSize="14.5sp"
-        android:textColor="#000"
-        android:lineSpacingExtra="4.8sp"
-        android:hint="Number of Passengers"
-        android:padding="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/border_gray"/>
+
         <EditText
             android:inputType="textEmailAddress"
             android:fontFamily="@font/nunito_req"
@@ -140,16 +149,122 @@
         android:layout_height="match_parent"
         android:background="@drawable/border_gray"/>
         <Button
+            android:onClick="Signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SignUp"
             android:id="@+id/btnSignUp"
             android:layout_marginTop="25dp"
             android:fontFamily="@font/nunito_bold"
             android:textSize="16.3sp"
-            android:textColor="#ffffff"
-            android:lineSpacingExtra="3sp"
-            tools:text="Sign Up"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:textColor="#fff"
             android:background="@drawable/button"/>
+
     </LinearLayout>
 </RelativeLayout>
 </ScrollView>
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/vertficationViwe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/details">
+        <ImageView
+            android:onClick="finish"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:id="@+id/backImg"
+            android:src="@drawable/back"/>
+        <LinearLayout
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/backImg">
+            <TextView
+                android:fontFamily="@font/nunito_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16.2sp"
+                android:textColor="#000000"
+                android:lineSpacingExtra="3sp"
+                android:gravity="center_horizontal"
+                android:text="Activation Code"
+                />
+            <TextView
+                android:fontFamily="@font/nunito_req"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13.3sp"
+                android:textColor="#99a2b3"
+                android:lineSpacingExtra="5.8sp"
+                android:gravity="center_horizontal"
+                android:text="Please Enter The Password"
+                /> <TextView
+            android:fontFamily="@font/nunito_req"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13.3sp"
+            android:textColor="#99a2b3"
+            android:lineSpacingExtra="5.8sp"
+            android:gravity="center_horizontal"
+            android:text="sent to 0XXXXXXXXXX"
+            />
+            <com.chaos.view.PinView
+                android:id="@+id/pinView"
+                style="@style/PinWidget.PinView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:cursorVisible="true"
+                android:hint="Hint."
+                android:inputType="text"
+                android:itemBackground="@drawable/border_button"
+                android:padding="4dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:cursorColor="@color/colorPrimary"
+                app:cursorWidth="2dp"
+                app:hideLineWhenFilled="true"
+                app:itemCount="5"
+                app:itemHeight="48dp"
+                app:itemRadius="4dp"
+                app:itemSpacing="5dp"
+                app:itemWidth="48dp"
+                app:lineColor="@color/colorPrimary"
+                app:lineWidth="2dp"
+                app:viewType="rectangle" />
+        </LinearLayout>
+        <Button
+            android:onClick="submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/button"
+            android:text="Submit"
+            android:textColor="#fff"
+            android:fontFamily="@font/nunito_bold"
+            android:layout_margin="25dp"/>
+
+    </RelativeLayout>
+    </RelativeLayout>
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:visibility="visible"
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.Large.DoubleBounce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/colorPrimary"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        />
+</RelativeLayout>

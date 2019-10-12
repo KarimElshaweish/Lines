@@ -10,7 +10,7 @@
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_slideshow">Contracts</string>
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
@@ -21,4 +21,14 @@
     <string name="menu_Terms">Terms and conditions</string>
     <string name="menu_Logout">Logout</string>
     <string name="title_activity_maps">Map</string>
+    <string-array name="countries_array">
+        <item>Afghanistan</item>
+        <item>Albania</item>
+        <item>Algeria</item>
+        <item>American Samoa</item>
+        <item>Andorra</item>
+        <item>Angola</item>
+        <item>Anguilla</item>
+        <item>Antarctica</item>
+    </string-array>
 </resources>

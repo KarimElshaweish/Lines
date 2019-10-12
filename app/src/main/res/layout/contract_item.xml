@@ -1,0 +1,116 @@
+<androidx.cardview.widget.CardView android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:elevation="5dp"
+    android:layout_margin="7dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:padding="15dp"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.github.florent37.expansionpanel.ExpansionHeader
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:expansion_headerIndicator="@id/headerIndicator"
+        app:expansion_layout="@id/expansionLayout"
+        app:expansion_toggleOnClick="true">
+
+            <!-- HEADER -->
+
+        ...
+        <!-- HEADER INDICATOR -->
+        <ImageView
+            android:adjustViewBounds="true"
+            android:id="@+id/headerIndicator"
+            android:layout_gravity="center_vertical|right"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_width="wrap_content"
+            app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/title"
+        android:fontFamily="@font/nunito_req"
+        android:textSize="19sp"
+        android:textColor="#000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Star Contract from School"/>
+    <TextView
+            android:id="@+id/supscription"
+        android:fontFamily="@font/nunito_req"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:text="one year subscription"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/status"
+        android:fontFamily="@font/nunito_req"/>
+
+</LinearLayout>
+
+    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+    <com.github.florent37.expansionpanel.ExpansionLayout
+        android:id="@+id/expansionLayout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:fontFamily="@font/nunito_req"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" subscription info"/>
+                    <TextView
+                        android:id="@+id/fullName"
+                android:fontFamily="@font/nunito_bold"
+                android:textSize="14sp"
+                        android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Karim Ashraf"/>
+            <TextView
+                android:fontFamily="@font/nunito_req"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/price"
+                android:text=" 350 SAR"/>
+            <TextView
+                android:fontFamily="@font/nunito_req"
+                android:textSize="14sp"
+                android:id="@+id/phoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 010000000"/>
+            <TextView
+                android:id="@+id/place"
+                android:fontFamily="@font/nunito_req"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Cairo-Egypt"/>
+            <TextView
+                android:id="@+id/email"
+                android:fontFamily="@font/nunito_req"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" n_school@gmail.com"/>
+        </LinearLayout>
+
+    </com.github.florent37.expansionpanel.ExpansionLayout>
+</LinearLayout>
+</androidx.cardview.widget.CardView>

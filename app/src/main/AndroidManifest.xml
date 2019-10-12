@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Acticites.Activites.DriverProfile"></activity>
+        <activity android:name=".Acticites.Activites.NewContractActivity"></activity>
+        <activity android:name=".Acticites.Activites.DriverProfile" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -35,16 +36,18 @@
             android:name=".Acticites.HomeMain"
             android:label="@string/title_activity_home_main"
             android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity android:name=".Acticites.ActivationCodeAct" />
+        <activity android:name=".Acticites.LoginAct" />
+        <activity android:name=".Acticites.SplashHome" />
+        <activity android:name=".Acticites.Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Acticites.ActivationCodeAct" />
-        <activity android:name=".Acticites.LoginAct" />
-        <activity android:name=".Acticites.SplashHome" />
-        <activity android:name=".Acticites.Login" />
         <activity android:name=".Acticites.SplashScreen" />
     </application>
 
