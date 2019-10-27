@@ -1,9 +1,5 @@
 package com.example.lines.Acticites;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.res.ResourcesCompat;
-
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -11,18 +7,18 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 
 import com.chaos.view.PinView;
 import com.example.lines.R;
 import com.github.ybq.android.spinkit.SpinKitView;
-import com.github.ybq.android.spinkit.sprite.Sprite;
-import com.github.ybq.android.spinkit.style.DoubleBounce;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.FirebaseTooManyRequestsException;
 import com.google.firebase.auth.AuthResult;
@@ -119,10 +115,10 @@ public class Login extends AppCompatActivity {
     public void submit(View view) {
 
     }
-    private Boolean mVerificationInProgress=false;
+        private Boolean mVerificationInProgress=false;
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
-    private PhoneAuthProvider.ForceResendingToken mResendToken;
-    private String mVerificationId;
+        private PhoneAuthProvider.ForceResendingToken mResendToken;
+        private String mVerificationId;
     private void startPhoneNumberVerification(final String phoneNumber) {
         mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
 

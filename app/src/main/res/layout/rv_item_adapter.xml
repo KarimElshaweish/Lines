@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/avatar"
             android:layout_width="58.7dp"
             android:layout_height="58.7dp"
             android:src="@drawable/avatar"
@@ -21,6 +22,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
             <TextView
+                android:id="@+id/tab"
                 android:fontFamily="@font/nunito_req"
                 android:gravity="center"
                 android:layout_gravity="center"
@@ -57,6 +59,7 @@
                 android:textColor="#000"
                 android:lineSpacingExtra="8.7sp"
                 android:text="Adam Mick"
+                android:id="@+id/fullName"
                 />
             <TextView
                 android:layout_width="wrap_content"

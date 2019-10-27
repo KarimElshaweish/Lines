@@ -69,7 +69,7 @@
         android:id="@+id/cvBottom"
     android:layout_width="match_parent"
     android:layout_alignParentBottom="true"
-    android:layout_height="173dp">
+    android:layout_height="wrap_content">
     <LinearLayout
         android:padding="10dp"
         android:layout_width="match_parent"
@@ -87,17 +87,37 @@
             android:text="Where to go?"
             />
 
-        <AutoCompleteTextView
-            android:id="@+id/destion"
-            android:hint="Select your destination"
-            android:fontFamily="@font/nunito_req"
-            android:drawableRight="@drawable/ic_right_arrow"
-            android:drawablePadding="7dp"
-            android:padding="7dp"
-            android:layout_marginTop="30dp"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/border_gray"/>
+            android:layout_height="wrap_content"
+           >
+
+            <Spinner
+                android:layout_centerVertical="true"
+                android:id="@+id/destion"
+                android:hint="Select your destination"
+                android:fontFamily="@font/nunito_req"
+                android:drawablePadding="7dp"
+                android:padding="7dp"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/border_gray"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/arrow"
+                android:layout_margin="7dp"/>
+            <ImageView
+
+                android:layout_margin="7dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/arrow"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_right_arrow"/>
+
+        </RelativeLayout>
+
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

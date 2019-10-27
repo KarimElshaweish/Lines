@@ -1,6 +1,7 @@
 package com.example.lines.Acticites.Adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,8 +43,10 @@ public class ContractsAdapter extends RecyclerView.Adapter<ContractsAdapter.View
         holder.phoneNumber.setText(cc.getPhoneNumber());
         if(!cc.getIsactivated()){
             holder.status.setText("In progress");
+            holder.status.setTextColor(Color.parseColor("#e60000"));
         }else{
             holder.status.setText("Activated");
+            holder.status.setTextColor(Color.parseColor("#00ff80"));
         }
     }
 

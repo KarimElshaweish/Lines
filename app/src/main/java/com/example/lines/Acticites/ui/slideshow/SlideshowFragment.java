@@ -46,6 +46,7 @@ public class SlideshowFragment extends Fragment {
                 .addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        cList=new ArrayList<>();
                         for(DataSnapshot dt:dataSnapshot.getChildren()){
                             CustomerContract cc=dt.getValue(CustomerContract.class);
                             cList.add(cc);
